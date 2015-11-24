@@ -16,7 +16,8 @@
 
     // define model/mongoose schema =================
     var Todo = mongoose.model('Todo', {
-        text : String
+        text : String,
+        person: String
     });
 
  
@@ -45,7 +46,7 @@
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
             text : req.body.text,
-            bringer : "",
+            person : req.body.person,
         }, function(err, todo) {
             if (err)
                 res.send(err);
@@ -60,21 +61,21 @@
     });
 
     //Update a todo
-    app.post('/api/todos/:todo_id', function(req, res) {
-        Todo.update({
-            bringer : req.body.text,
-        }, function(err, todo) {
-            if (err)
-                res.send(err);
+    // app.post('/api/todos/:todo_id', function(req, res) {
+    //     Todo.update({
+    //         bringer : req.body.text,
+    //     }, function(err, todo) {
+    //         if (err)
+    //             res.send(err);
 
-            // get and return all the todos after you create another
-            Todo.find(function(err, todos) {
-                if (err)
-                    res.send(err)
-                res.json(todos);
-            });
-        });
-    });
+    //         // get and return all the todos after you create another
+    //         Todo.find(function(err, todos) {
+    //             if (err)
+    //                 res.send(err)
+    //             res.json(todos);
+    //         });
+    //     });
+    // });
 
 
     // delete a todo

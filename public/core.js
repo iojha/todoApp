@@ -1,7 +1,7 @@
 var scotchTodo =  angular.module('scotchTodo', []);
 
 function mainController($scope, $http){
-	$scope.formData = {};
+	$scope.formData = {}; //initializing object
 
 	//when landing on the page, get all todos and show
 	$http.get('/api/todos')
@@ -18,7 +18,7 @@ function mainController($scope, $http){
 		$http.post('/api/todos', $scope.formData)
 		.success(function(data){
 			$scope.formData = {}; //clear the form so our user can enter another
-			$scope.todos= data;
+			$scope.todos = data;
 			console.log(data);
 		})
 		.error(function(data){
@@ -27,16 +27,16 @@ function mainController($scope, $http){
 	};
 
     // update a todo
-    $scope.updateTodo = function(id){
-        $http.post('/api/todos/' +id)
-        .success(function(data){
-            $scope.todos = data;
-            console.log(data);
-        })
-        .error(function(data){
-            console.log('Error: ' +data);
-        });
-    };
+    // $scope.updateTodo = function(id){
+    //     $http.post('/api/todos/' +id)
+    //     .success(function(data){
+    //         $scope.todos = data;
+    //         console.log(data);
+    //     })
+    //     .error(function(data){
+    //         console.log('Error: ' +data);
+    //     });
+    // };
 
 	// delete a todo after checking it
 	$scope.deleteTodo = function(id){
