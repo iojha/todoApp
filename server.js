@@ -5,6 +5,9 @@
     var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
     var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
+
+
+
     mongoose.connect('mongodb://iojha:specialcup@apollo.modulusmongo.net:27017/abuV6use');     // connect to mongoDB database on modulus.io
 
     app.use(express.static('public'));               				// set the static files location /public/img will be /img for users
@@ -102,7 +105,7 @@
     });
 
 
-    app.listen(8080);
-    console.log("App listening on port 8080");
+    app.listen(process.env.PORT);
+    console.log("server online");
 
 
