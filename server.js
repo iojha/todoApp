@@ -8,7 +8,7 @@
 
 
 
-    mongoose.connect('mongodb://iojha:specialcup@apollo.modulusmongo.net:27017/abuV6use');     // connect to mongoDB database on modulus.io
+    mongoose.connect('mongodb://cc:MattDamon#1@ds053874.mongolab.com:53874/todo');     // connect to mongoDB database on modulus.io
 
     app.use(express.static('public'));               				// set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
@@ -105,7 +105,7 @@
     });
 
 
-    app.listen(process.env.PORT);
-    console.log("server online");
+    app.listen(process.env.PORT || 8080);
+    console.log("App listening on port 8080");
 
 
