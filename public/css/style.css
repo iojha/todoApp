@@ -1,0 +1,74 @@
+/*GLOBAL STYLES*/
+
+@font-face {
+  font-family: 'Montserrat_Light';
+  src: url('fonts/Montserrat-Light.woff');
+}
+
+@font-face {
+  font-family: 'Montserrat_UltraLight';
+  src: url('fonts/Montserrat-UltraLight.woff');
+}
+
+@font-face {
+  font-family: 'Montserrat_SemiBold';
+  src: url('fonts/Montserrat-SemiBold.woff');
+}  
+  
+
+body {
+	font-family: 'Montserrat_Light', sans-serif;
+	font-size: 1.25em;
+	background-color: #000;
+}
+
+h1 {
+	font-family: 'Montserrat_SemiBold', sans-serif;
+	font-size: 4em;
+	text-align: center;
+	text-shadow: 1px 1px #000000;
+}
+
+h3 {
+	font-family: 'Montserrat_Light', sans-serif;
+	font-size: 2em;
+	font-weight: 400;
+	text-align: center;
+}
+
+/*BOOTSTRAP ELEMENTS REDESIGNED*/
+/*Buttons*/
+
+.btn{
+	padding: 5.5px 15px;
+}
+
+.navbar-inverse {
+	background-color: transparent;
+	border: none;
+}
+
+.btn-primary {
+	border-radius: 0;
+	background-color: rgba(255,255,255, .3);
+	border: none;
+	margin-left: 12px;
+}
+
+.btn-search {
+	background-image: url('../img/search_icon.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 30px;
+}
+
+
+#mainBg{
+	background-image: url('../img/dog_outdoors.jpg');
+	background-position: center center;
+	background-size: cover;
+	height: 750px;
+}
+
+
